@@ -1,0 +1,29 @@
+
+<%- include('../cabecalho') %>
+
+<div>
+    <a href="/equipe">Voltar</a>
+
+    <h3>Nova Equipe</h3>
+
+    <form action="/equipe/add" method="POST">
+
+        <p>Nome da equipe</p>
+        <input type="text" name="nome" placeholder="Nome da equipe..." required>
+
+        <p>País</p>
+        <input type="text" name="pais" placeholder="País..." required>
+
+        <p>Chefe de equipe</p>
+        <input type="text" name="chefe" placeholder="Nome do chefe...">
+
+        <p>Ano de fundação</p>
+        <input type="number" name="anoFundacao">
+
+        <button type="submit">Adicionar</button>
+        <button type="reset">Cancelar</button>
+
+    </form>
+</div>
+
+<%- include('../rodape') %>

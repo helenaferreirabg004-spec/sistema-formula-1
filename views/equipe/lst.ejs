@@ -1,0 +1,35 @@
+
+<%- include('../cabecalho') %>
+
+<div>
+    <h3>Equipes da Fórmula 1</h3>
+
+    <p>Gerencie as equipes cadastradas.</p>
+
+    <a href="/equipe/add">+ Nova Equipe</a>
+
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>País</td>
+            <td>Chefe</td>
+            <td>Fundação</td>
+            <td>Ações</td>
+        </tr>
+
+        <% equipes.forEach(equipe => { %>
+            <tr>
+                <td><%= equipe.nome %></td>
+                <td><%= equipe.pais %></td>
+                <td><%= equipe.chefe %></td>
+                <td><%= equipe.anoFundacao %></td>
+                <td>
+                    <a href="/equipe/upd/<%= equipe.id %>">Editar</a>
+                    <a href="/equipe/del/<%= equipe.id %>">Excluir</a>
+                </td>
+            </tr>
+        <% }) %>
+    </table>
+</div>
+
+<%- include('../rodape') %>

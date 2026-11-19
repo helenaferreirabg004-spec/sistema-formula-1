@@ -1,0 +1,35 @@
+
+<%- include('../cabecalho') %>
+
+<div>
+    <h3>Pilotos da Fórmula 1</h3>
+
+    <p>Gerencie os pilotos cadastrados.</p>
+
+    <a href="/piloto/add">+ Novo Piloto</a>
+
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>Nacionalidade</td>
+            <td>Número</td>
+            <td>Equipe</td>
+            <td>Ações</td>
+        </tr>
+
+        <% pilotos.forEach(piloto => { %>
+            <tr>
+                <td><%= piloto.nome %></td>
+                <td><%= piloto.nacionalidade %></td>
+                <td><%= piloto.numero %></td>
+                <td><%= piloto.equipe %></td>
+                <td>
+                    <a href="/piloto/upd/<%= piloto.id %>">Editar</a>
+                    <a href="/piloto/del/<%= piloto.id %>">Excluir</a>
+                </td>
+            </tr>
+        <% }) %>
+    </table>
+</div>
+
+<%- include('../rodape') %>

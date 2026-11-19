@@ -1,0 +1,35 @@
+
+<%- include('../cabecalho') %>
+
+<div>
+    <a href="/circuito">Voltar</a>
+
+    <h3>Novo Circuito</h3>
+
+    <form action="/circuito/add" method="POST">
+
+        <p>Nome do circuito</p>
+        <input type="text" name="nome" placeholder="Nome do circuito..." required>
+
+        <p>País</p>
+        <input type="text" name="pais" placeholder="País..." required>
+
+        <p>Cidade</p>
+        <input type="text" name="cidade" placeholder="Cidade..." required>
+
+        <p>Extensão (km)</p>
+        <input type="number" step="0.001" name="extensao">
+
+        <p>Número de voltas</p>
+        <input type="number" name="voltas">
+
+        <p>Recorde da volta</p>
+        <input type="text" name="recorde" placeholder="Ex: 1:32.450">
+
+        <button type="submit">Adicionar</button>
+        <button type="reset">Cancelar</button>
+
+    </form>
+</div>
+
+<%- include('../rodape') %>

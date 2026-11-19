@@ -1,0 +1,29 @@
+
+<%- include('../cabecalho') %>
+
+<div>
+    <a href="/equipe">Voltar</a>
+
+    <h3>Alterar Equipe</h3>
+
+    <form method="POST">
+
+        <p>Nome</p>
+        <input type="text" name="nome" value="<%= equipe.nome %>" required>
+
+        <p>País</p>
+        <input type="text" name="pais" value="<%= equipe.pais %>" required>
+
+        <p>Chefe de equipe</p>
+        <input type="text" name="chefe" value="<%= equipe.chefe %>">
+
+        <p>Ano de fundação</p>
+        <input type="number" name="anoFundacao" value="<%= equipe.anoFundacao %>">
+
+        <button type="submit">Salvar Alterações</button>
+        <button type="reset">Cancelar</button>
+
+    </form>
+</div>
+
+<%- include('../rodape') %>

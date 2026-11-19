@@ -1,0 +1,39 @@
+
+<%- include('../cabecalho') %>
+
+<div>
+    <h3>Circuitos da Fórmula 1</h3>
+
+    <p>Gerencie os circuitos cadastrados.</p>
+
+    <a href="/circuito/add">+ Novo Circuito</a>
+
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>País</td>
+            <td>Cidade</td>
+            <td>Extensão</td>
+            <td>Voltas</td>
+            <td>Recorde</td>
+            <td>Ações</td>
+        </tr>
+
+        <% circuitos.forEach(circuito => { %>
+            <tr>
+                <td><%= circuito.nome %></td>
+                <td><%= circuito.pais %></td>
+                <td><%= circuito.cidade %></td>
+                <td><%= circuito.extensao %> km</td>
+                <td><%= circuito.voltas %></td>
+                <td><%= circuito.recorde %></td>
+                <td>
+                    <a href="/circuito/upd/<%= circuito.id %>">Editar</a>
+                    <a href="/circuito/del/<%= circuito.id %>">Excluir</a>
+                </td>
+            </tr>
+        <% }) %>
+    </table>
+</div>
+
+<%- include('../rodape') %>
